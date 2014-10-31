@@ -7,18 +7,25 @@
 //
 
 import Foundation
-import AlamoFire
 
 class SocialRadarRestAPI: NSObject {
     
     func getQuestion() {
 //        var questionJSON : String;
         
-        var request2 = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions").responseJSON {
-            (_,_,json,_) in
-             println(json)
-        }
         
+//        var questionReq = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions")
+        
+//        questionReq.responseJSON{
+//            (_,_,json,_) in
+//            NSString(json)
+//        };
+        
+//        var question : [Question];
+//        
+//        questionReq.responseCollection { (_, _, question: [Question]?, _) in
+//            println(user)
+//        }
 //        return questionJSON;
     }
     

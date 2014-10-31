@@ -17,27 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1965B9711A03657400D03CEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1965B96C1A03657400D03CEF /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		1965B9731A03657400D03CEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1965B96C1A03657400D03CEF /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = AlamofireTests;
-		};
-		1965B9781A0366B200D03CEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1965B96C1A03657400D03CEF /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
 		B07438D51A0335AD00CA6B8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B07438B71A0335AD00CA6B8B /* Project object */;
@@ -49,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		1965B96A1A0347BA00D03CEF /* SocialRadarRestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialRadarRestAPI.swift; sourceTree = "<group>"; };
-		1965B96C1A03657400D03CEF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		B07438BF1A0335AD00CA6B8B /* SocialRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07438C31A0335AD00CA6B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07438C41A0335AD00CA6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,19 +58,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1965B96D1A03657400D03CEF /* Products */ = {
+		1965B97C1A0377B400D03CEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1965B9721A03657400D03CEF /* Alamofire.framework */,
-				1965B9741A03657400D03CEF /* AlamofireTests.xctest */,
 			);
-			name = Products;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B07438B61A0335AD00CA6B8B = {
 			isa = PBXGroup;
 			children = (
-				1965B96C1A03657400D03CEF /* Alamofire.xcodeproj */,
 				B07438C11A0335AD00CA6B8B /* SocialRadar */,
 				B07438D71A0335AD00CA6B8B /* SocialRadarTests */,
 				B07438C01A0335AD00CA6B8B /* Products */,
@@ -111,6 +86,7 @@
 		B07438C11A0335AD00CA6B8B /* SocialRadar */ = {
 			isa = PBXGroup;
 			children = (
+				1965B97C1A0377B400D03CEF /* Model */,
 				B07438C41A0335AD00CA6B8B /* AppDelegate.swift */,
 				B07438C61A0335AD00CA6B8B /* ViewController.swift */,
 				B07438C81A0335AD00CA6B8B /* Main.storyboard */,
@@ -161,7 +137,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1965B9791A0366B200D03CEF /* PBXTargetDependency */,
 			);
 			name = SocialRadar;
 			productName = SocialRadar;
@@ -215,12 +190,6 @@
 			mainGroup = B07438B61A0335AD00CA6B8B;
 			productRefGroup = B07438C01A0335AD00CA6B8B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1965B96D1A03657400D03CEF /* Products */;
-					ProjectRef = 1965B96C1A03657400D03CEF /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B07438BE1A0335AD00CA6B8B /* SocialRadar */,
@@ -228,23 +197,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1965B9721A03657400D03CEF /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 1965B9711A03657400D03CEF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1965B9741A03657400D03CEF /* AlamofireTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AlamofireTests.xctest;
-			remoteRef = 1965B9731A03657400D03CEF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B07438BD1A0335AD00CA6B8B /* Resources */ = {
@@ -288,11 +240,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1965B9791A0366B200D03CEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = 1965B9781A0366B200D03CEF /* PBXContainerItemProxy */;
-		};
 		B07438D61A0335AD00CA6B8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B07438BE1A0335AD00CA6B8B /* SocialRadar */;
