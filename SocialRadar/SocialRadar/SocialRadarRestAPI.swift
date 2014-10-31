@@ -10,24 +10,24 @@ import Foundation
 //import AlamoFire
 
 class SocialRadarRestAPI: NSObject {
-    
-    func getQuestion() {
-//        var questionJSON : String;
+    func getQuestion() {        
+        let url = NSURL(string: "http://api.radar.codedeck.com/questions")
+        let theRequest = NSURLRequest(URL: url!)
         
-//        
-//        var questionReq = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions")
-//        
-//        questionReq.responseJSON{
-//            (_,_,json,_) in
-//            println(json)
-//        };
-        
-//        var question : [Question];
-//        
-//        questionReq.responseCollection { (_, _, question: [Question]?, _) in
-//            println(user)
-//        }
-//        return questionJSON;
+        NSURLConnection.sendAsynchronousRequest(theRequest, queue: NSOperationQueue(), completionHandler: {(response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            if data.length > 0 && error == nil {
+                let response : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+                
+                println(response)
+                
+//                var jsonresp:String! = response
+//                
+//                println(jsonresp)
+                
+            } else {
+                println("Connection error")
+            }
+        })
     }
     
     func logIn() {
