@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1965B96B1A0347BA00D03CEF /* SocialRadarRestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965B96A1A0347BA00D03CEF /* SocialRadarRestAPI.swift */; };
+		1965B9871A039D4000D03CEF /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965B9861A039D4000D03CEF /* Alamofire.swift */; };
 		B07438C51A0335AD00CA6B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07438C41A0335AD00CA6B8B /* AppDelegate.swift */; };
 		B07438C71A0335AD00CA6B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07438C61A0335AD00CA6B8B /* ViewController.swift */; };
 		B07438CA1A0335AD00CA6B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07438C81A0335AD00CA6B8B /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		1965B96A1A0347BA00D03CEF /* SocialRadarRestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialRadarRestAPI.swift; sourceTree = "<group>"; };
+		1965B9851A039D4000D03CEF /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		1965B9861A039D4000D03CEF /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		B07438BF1A0335AD00CA6B8B /* SocialRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07438C31A0335AD00CA6B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07438C41A0335AD00CA6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +68,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		1965B9841A039C8C00D03CEF /* AdamoFire */ = {
+			isa = PBXGroup;
+			children = (
+				1965B9861A039D4000D03CEF /* Alamofire.swift */,
+				1965B9851A039D4000D03CEF /* Alamofire.h */,
+			);
+			name = AdamoFire;
+			sourceTree = "<group>";
+		};
 		B07438B61A0335AD00CA6B8B = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 		B07438C11A0335AD00CA6B8B /* SocialRadar */ = {
 			isa = PBXGroup;
 			children = (
+				1965B9841A039C8C00D03CEF /* AdamoFire */,
 				1965B97C1A0377B400D03CEF /* Model */,
 				B07438C41A0335AD00CA6B8B /* AppDelegate.swift */,
 				B07438C61A0335AD00CA6B8B /* ViewController.swift */,
@@ -225,6 +238,7 @@
 			files = (
 				1965B96B1A0347BA00D03CEF /* SocialRadarRestAPI.swift in Sources */,
 				B07438C71A0335AD00CA6B8B /* ViewController.swift in Sources */,
+				1965B9871A039D4000D03CEF /* Alamofire.swift in Sources */,
 				B07438C51A0335AD00CA6B8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
