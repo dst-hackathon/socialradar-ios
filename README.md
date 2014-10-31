@@ -1,4 +1,4 @@
 socialradar-ios
 ===============
 
-Social Radar Android
+Social Radar iOS
