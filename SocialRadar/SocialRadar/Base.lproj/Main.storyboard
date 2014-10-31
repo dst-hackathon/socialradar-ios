@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="482" y="99"/>
         </scene>
-        <!--Signup Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="Nd7-cp-gn7">
             <objects>
-                <viewController id="qam-g3-jdp" customClass="SignupController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qam-g3-jdp" customClass="SignupViewController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TS-UC-pcP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +85,9 @@
                                 <state key="normal" title="Already have an account? Login Now">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gotoLoginPage:" destination="qam-g3-jdp" eventType="touchUpInside" id="mvN-cv-VqA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OMc-rA-zbD">
                                 <rect key="frame" x="116" y="310" width="89" height="30"/>
@@ -94,6 +97,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="performSignup:" destination="qam-g3-jdp" eventType="touchUpInside" id="6w4-hz-IlR"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" minimumFontSize="17" id="GAg-7X-Oqu">
                                 <rect key="frame" x="60" y="124" width="201" height="30"/>
@@ -116,15 +122,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.58039215690000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="Jmh-pf-QbY" id="lJz-0z-MOx"/>
+                        <outlet property="txtPassword" destination="7Zh-Ng-VCa" id="dcU-1Y-XfC"/>
+                        <outlet property="txtUsername" destination="GAg-7X-Oqu" id="D8B-Dp-UTf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8i5-ed-Yi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="919" y="550"/>
         </scene>
-        <!--Login Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Z9K-je-lx0">
             <objects>
-                <viewController id="FHn-9R-SK0" customClass="LoginController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FHn-9R-SK0" customClass="LoginViewController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X4a-8b-P9k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +167,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="performSignin:" destination="FHn-9R-SK0" eventType="touchUpInside" id="Sza-ck-swT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sjk-wy-WoT">
                                 <rect key="frame" x="16" y="349" width="288" height="30"/>
@@ -170,6 +184,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.58039215690000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="txtPassword" destination="GsO-gf-mcg" id="kXZ-gl-Uzc"/>
+                        <outlet property="txtUsername" destination="3B7-zK-H0v" id="jtJ-mk-exA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dj3-H2-1jQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
