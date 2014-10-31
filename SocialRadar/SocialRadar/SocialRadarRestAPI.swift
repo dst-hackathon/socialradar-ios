@@ -14,7 +14,7 @@ class SocialRadarRestAPI: NSObject {
     func getQuestion() {
 //        var questionJSON : String;
         
-        
+//        
 //        var questionReq = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions")
 //        
 //        questionReq.responseJSON{
