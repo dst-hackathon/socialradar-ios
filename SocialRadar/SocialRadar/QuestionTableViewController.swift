@@ -10,7 +10,7 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
 
-    var items: [String] = ["We", "Heart", "Swift"]
+    var items: [String] = ["We", "Heart", "B A C K TO S I G N U P"]
     let navigationTitle = "Questions"
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class QuestionTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
-        cell.textLabel.text = self.items[indexPath.row]
+        cell.textLabel?.text = self.items[indexPath.row]
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
@@ -43,7 +43,13 @@ class QuestionTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         println("You selected cell #\(indexPath.row)!")
+        if(indexPath.row == 2){
+            self.performSegueWithIdentifier("goto_signup", sender: self)
+        }
+        else{
+            self.performSegueWithIdentifier("selectedQuestion", sender: self)
+        }
         
-        self.performSegueWithIdentifier("selectedQuestion", sender: self)
+        
     }
 }
