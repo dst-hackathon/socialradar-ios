@@ -99,7 +99,6 @@
                                 </state>
                                 <connections>
                                     <action selector="performSignup:" destination="qam-g3-jdp" eventType="touchUpInside" id="6w4-hz-IlR"/>
-                                    <segue destination="nC0-cI-cC6" kind="modal" id="7pu-Uh-o7b"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" minimumFontSize="17" id="GAg-7X-Oqu">
@@ -169,7 +168,11 @@
                                     <color key="titleShadowColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
+                                    <segue destination="nC0-cI-cC6" kind="modal" id="A6K-Q4-beK"/>
+=======
                                     <action selector="performSignin:" destination="FHn-9R-SK0" eventType="touchUpInside" id="Sza-ck-swT"/>
+>>>>>>> 831adc880540a8a5f7f2a81f6250d0b1455fc0b3
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sjk-wy-WoT">
