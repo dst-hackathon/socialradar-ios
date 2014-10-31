@@ -28,6 +28,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="performLogout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X2m-XB-jzB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XoY-3E-rUI">
                                 <rect key="frame" x="115" y="334" width="91" height="30"/>
@@ -41,22 +44,30 @@
                                     <segue destination="FHn-9R-SK0" kind="modal" id="CXn-Vb-EXf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oaf-kv-le6">
+                                <rect key="frame" x="0.0" y="224" width="299" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.58039215690000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="cJc-wl-5iq"/>
                     <connections>
+                        <outlet property="usernameLabel" destination="Oaf-kv-le6" id="oT1-zE-VpX"/>
                         <segue destination="FHn-9R-SK0" kind="modal" identifier="goto_login" id="lzu-FC-dRm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="207"/>
+            <point key="canvasLocation" x="482" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Controller-->
         <scene sceneID="Nd7-cp-gn7">
             <objects>
-                <viewController id="qam-g3-jdp" sceneMemberID="viewController">
+                <viewController id="qam-g3-jdp" customClass="SignupController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TS-UC-pcP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="919" y="550"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="Z9K-je-lx0">
             <objects>
-                <viewController id="FHn-9R-SK0" sceneMemberID="viewController">
+                <viewController id="FHn-9R-SK0" customClass="LoginController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X4a-8b-P9k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

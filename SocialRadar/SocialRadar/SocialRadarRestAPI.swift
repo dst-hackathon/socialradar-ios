@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AlamoFire
+//import AlamoFire
 
 class SocialRadarRestAPI: NSObject {
     
@@ -15,12 +15,12 @@ class SocialRadarRestAPI: NSObject {
 //        var questionJSON : String;
         
         
-        var questionReq = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions")
-        
-        questionReq.responseJSON{
-            (_,_,json,_) in
-            println(json)
-        };
+//        var questionReq = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions")
+//        
+//        questionReq.responseJSON{
+//            (_,_,json,_) in
+//            println(json)
+//        };
         
 //        var question : [Question];
 //        
