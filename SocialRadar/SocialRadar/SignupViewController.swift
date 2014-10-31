@@ -27,6 +27,7 @@ class SignupViewController: UIViewController {
     
     @IBAction func performSignup(sender: UIButton) {
     }
+    
     @IBAction func gotoLoginPage(sender: UIButton) {
     }
 
