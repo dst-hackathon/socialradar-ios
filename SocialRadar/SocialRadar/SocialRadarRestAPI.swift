@@ -10,29 +10,23 @@ import Foundation
 import AlamoFire
 
 class SocialRadarRestAPI: NSObject {
-//    var data : NSMutableData = NSMutableData();
-//    var delegate :
     
     func getQuestion() {
+//        var questionJSON : String;
         
-//        https://api.flickr.com/services/rest/?method=flickr.test.echo&api_key=7080b3a250ac855dcb96395939b61e57&format=json&nojsoncallback=1
-        
-        var parameter = ["method":"flickr.test.echo",
-            "api_key":"https://api.flickr.com/services/rest/?method=flickr.test.echo&api_key=7080b3a250ac855dcb96395939b61e57&format=json&nojsoncallback=1",
-            "format":"json","nojsoncallback":"1"
-        ];
-        
-        Alamofire.request(.GET, "https://api.flickr.com/services/rest/", parameters: parameter)
-            .response { (request, response, data, error) in
-                println(request)
-                println(response)
-                println(error)
+        var request2 = Alamofire.request(.GET, "http://api.radar.codedeck.com/questions").responseJSON {
+            (_,_,json,_) in
+             println(json)
         }
         
-//        var resp = AlamoFire.request(.GET, "https://api.flickr.com/services/rest/", parameters: parameter).responseJSON { (_, _, JSON, _) in
-//            println(JSON)
-//        }
+//        return questionJSON;
+    }
+    
+    func logIn() {
+    
+    }
+    
+    func submitAnswer() {
         
-//        return resp;
     }
 }
