@@ -10,6 +10,8 @@
 		1965B96B1A0347BA00D03CEF /* SocialRadarRestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965B96A1A0347BA00D03CEF /* SocialRadarRestAPI.swift */; };
 		7509058E1A039E67003B00F3 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509058D1A039E67003B00F3 /* QuestionTableViewController.swift */; };
 		750905921A03B6A4003B00F3 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750905911A03B6A4003B00F3 /* AnswerTableViewCell.swift */; };
+		881495401A03AF2500E47DD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814953F1A03AF2500E47DD9 /* LoginViewController.swift */; };
+		881495421A03AF3700E47DD9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881495411A03AF3600E47DD9 /* SignupViewController.swift */; };
 		B07438C51A0335AD00CA6B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07438C41A0335AD00CA6B8B /* AppDelegate.swift */; };
 		B07438C71A0335AD00CA6B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07438C61A0335AD00CA6B8B /* ViewController.swift */; };
 		B07438CA1A0335AD00CA6B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07438C81A0335AD00CA6B8B /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		1965B96A1A0347BA00D03CEF /* SocialRadarRestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialRadarRestAPI.swift; sourceTree = "<group>"; };
 		7509058D1A039E67003B00F3 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		750905911A03B6A4003B00F3 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		8814953F1A03AF2500E47DD9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		881495411A03AF3600E47DD9 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B07438BF1A0335AD00CA6B8B /* SocialRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07438C31A0335AD00CA6B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07438C41A0335AD00CA6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				1965B96A1A0347BA00D03CEF /* SocialRadarRestAPI.swift */,
 				7509058D1A039E67003B00F3 /* QuestionTableViewController.swift */,
 				750905911A03B6A4003B00F3 /* AnswerTableViewCell.swift */,
+				8814953F1A03AF2500E47DD9 /* LoginViewController.swift */,
+				881495411A03AF3600E47DD9 /* SignupViewController.swift */,
 			);
 			path = SocialRadar;
 			sourceTree = "<group>";
@@ -229,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881495401A03AF2500E47DD9 /* LoginViewController.swift in Sources */,
 				1965B96B1A0347BA00D03CEF /* SocialRadarRestAPI.swift in Sources */,
 				7509058E1A039E67003B00F3 /* QuestionTableViewController.swift in Sources */,
+				881495421A03AF3700E47DD9 /* SignupViewController.swift in Sources */,
 				B07438C71A0335AD00CA6B8B /* ViewController.swift in Sources */,
 				750905921A03B6A4003B00F3 /* AnswerTableViewCell.swift in Sources */,
 				B07438C51A0335AD00CA6B8B /* AppDelegate.swift in Sources */,
