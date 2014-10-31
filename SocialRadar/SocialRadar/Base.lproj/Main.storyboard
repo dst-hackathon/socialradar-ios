@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwB-uz-5ZX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwB-uz-5ZX">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -54,7 +54,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.58039215690000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="cJc-wl-5iq"/>
+                    <navigationItem key="navigationItem" title="Home" id="cJc-wl-5iq">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="PoP-W5-le5"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="usernameLabel" destination="Oaf-kv-le6" id="oT1-zE-VpX"/>
                         <segue destination="FHn-9R-SK0" kind="modal" identifier="goto_login" id="lzu-FC-dRm"/>
@@ -99,7 +101,6 @@
                                 </state>
                                 <connections>
                                     <action selector="performSignup:" destination="qam-g3-jdp" eventType="touchUpInside" id="6w4-hz-IlR"/>
-                                    <segue destination="nC0-cI-cC6" kind="modal" id="7pu-Uh-o7b"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" minimumFontSize="17" id="GAg-7X-Oqu">
@@ -120,9 +121,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="Qqa-jz-ZZV">
+                                <rect key="frame" x="239" y="273" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="nC0-cI-cC6" kind="modal" id="j5J-kY-EFa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.58039215690000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="oBF-Cv-9aG"/>
+                        <barButtonItem title="Item" id="9uY-Jl-raw"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="txtConfirmPassword" destination="Jmh-pf-QbY" id="lJz-0z-MOx"/>
                         <outlet property="txtPassword" destination="7Zh-Ng-VCa" id="dcU-1Y-XfC"/>
