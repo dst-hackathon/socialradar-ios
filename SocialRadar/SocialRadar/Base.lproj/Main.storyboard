@@ -240,7 +240,13 @@
                             <outlet property="delegate" destination="YFx-N3-5RQ" id="mjO-4r-4Ef"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="T6a-0e-Nfh"/>
+                    <navigationItem key="navigationItem" id="T6a-0e-Nfh">
+                        <barButtonItem key="rightBarButtonItem" title="DONE" id="2uH-qn-3MF">
+                            <connections>
+                                <segue destination="1U2-x8-8d6" kind="modal" id="dpH-hU-lxN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="appsTableView" destination="og8-Sw-e1b" id="KxY-Ag-QTi"/>
                         <segue destination="qam-g3-jdp" kind="push" identifier="goto_signup" id="0yM-xV-wIb"/>
@@ -259,7 +265,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="G7A-6m-rhA">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="G7A-6m-rhA">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G7A-6m-rhA" id="jwX-wo-AUm">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -280,6 +286,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ac-a5-QX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2432" y="158"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Pbq-Uz-q3S">
+            <objects>
+                <viewController id="1U2-x8-8d6" customClass="PageViewController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C2B-eo-MYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z3T-sf-VdM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBa-gs-kiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2917" y="158"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="TH7-gf-v3h">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Ile-2D-npK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OT6-n9-Iph"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtb-C7-t16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3349" y="158"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="EcA-hd-QxR">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="k5D-lT-M1p" customClass="PageContentViewController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IWC-Jf-9Ot">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" id="in6-K7-wgR">
+                                <rect key="frame" x="16" y="169" width="288" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uz4-uw-oMP">
+                                <rect key="frame" x="28" y="257" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHK-ad-y80">
+                                <rect key="frame" x="94" y="238" width="210" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="IHK-ad-y80" id="HUb-OW-aSK"/>
+                        <outlet property="username" destination="in6-K7-wgR" id="H8q-bd-WHA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1e-9b-xqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3767" y="158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GDo-Pb-JjK">
@@ -327,7 +399,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Q1G-Oe-dCG"/>
-        <segue reference="WIS-dy-SHh"/>
+        <segue reference="HKc-Bm-5qM"/>
+        <segue reference="0yM-xV-wIb"/>
     </inferredMetricsTieBreakers>
 </document>
