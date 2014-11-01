@@ -13,10 +13,13 @@
 		7509058E1A039E67003B00F3 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7509058D1A039E67003B00F3 /* QuestionTableViewController.swift */; };
 		750905921A03B6A4003B00F3 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750905911A03B6A4003B00F3 /* AnswerTableViewCell.swift */; };
 		75CAC9741A04920F00B09AA0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC9731A04920F00B09AA0 /* Questions.swift */; };
+		75CAC9761A04DEEF00B09AA0 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC9751A04DEEF00B09AA0 /* PageContentViewController.swift */; };
+		75CAC97A1A04ED8700B09AA0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC9791A04ED8700B09AA0 /* PageViewController.swift */; };
 		881495401A03AF2500E47DD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814953F1A03AF2500E47DD9 /* LoginViewController.swift */; };
 		881495421A03AF3700E47DD9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881495411A03AF3600E47DD9 /* SignupViewController.swift */; };
 		B028D23A1A04E717007F406C /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028D2391A04E717007F406C /* CategoryTableViewController.swift */; };
 		B028D23B1A04E764007F406C /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FAAB901A04C297002BBB68 /* Option.swift */; };
+		B028D23D1A04EC76007F406C /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028D23C1A04EC76007F406C /* OptionTableViewController.swift */; };
 		B07438C51A0335AD00CA6B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07438C41A0335AD00CA6B8B /* AppDelegate.swift */; };
 		B07438C71A0335AD00CA6B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07438C61A0335AD00CA6B8B /* ViewController.swift */; };
 		B07438CA1A0335AD00CA6B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07438C81A0335AD00CA6B8B /* Main.storyboard */; };
@@ -43,9 +46,12 @@
 		7509058D1A039E67003B00F3 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		750905911A03B6A4003B00F3 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		75CAC9731A04920F00B09AA0 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		75CAC9751A04DEEF00B09AA0 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		75CAC9791A04ED8700B09AA0 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		8814953F1A03AF2500E47DD9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		881495411A03AF3600E47DD9 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B028D2391A04E717007F406C /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		B028D23C1A04EC76007F406C /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
 		B07438BF1A0335AD00CA6B8B /* SocialRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07438C31A0335AD00CA6B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07438C41A0335AD00CA6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				881495411A03AF3600E47DD9 /* SignupViewController.swift */,
 				009E2E0A1A04D8BB007541F0 /* SRWebClient.swift */,
 				B028D2391A04E717007F406C /* CategoryTableViewController.swift */,
+				B028D23C1A04EC76007F406C /* OptionTableViewController.swift */,
 			);
 			path = SocialRadar;
 			sourceTree = "<group>";
@@ -259,8 +266,11 @@
 				B07438C71A0335AD00CA6B8B /* ViewController.swift in Sources */,
 				19FAAB8F1A04C20F002BBB68 /* Category.swift in Sources */,
 				75CAC9741A04920F00B09AA0 /* Questions.swift in Sources */,
+				75CAC9761A04DEEF00B09AA0 /* PageContentViewController.swift in Sources */,
+				75CAC97A1A04ED8700B09AA0 /* PageViewController.swift in Sources */,
 				750905921A03B6A4003B00F3 /* AnswerTableViewCell.swift in Sources */,
 				B07438C51A0335AD00CA6B8B /* AppDelegate.swift in Sources */,
+				B028D23D1A04EC76007F406C /* OptionTableViewController.swift in Sources */,
 				B028D23A1A04E717007F406C /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

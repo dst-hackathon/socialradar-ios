@@ -153,7 +153,7 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
                         let oOrder = optionJson["order"] as AnyObject? as? String
                         let oText = optionJson["text"] as AnyObject? as? String
                         
-                        let option = Option(id: cId!, order: cOrder!, text: cText!)
+                        let option = Option(id: cId!, order: cOrder!, text: oText!)
                         
                         category.options.append(option)
                     }
@@ -177,7 +177,7 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
         if segue.identifier == "selectedQuestion"{
             let vc : CategoryTableViewController = segue.destinationViewController as CategoryTableViewController
 
-            vc.question = questions[selectedRow]
+            vc.question = self.questions[selectedRow]
         }
         
     }
