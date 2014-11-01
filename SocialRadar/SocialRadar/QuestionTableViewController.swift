@@ -10,8 +10,8 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate  {
 
-    var items: [String] = ["We", "Heart", "B A C K TO S I G N U P"]
     let navigationTitle = "Questions"
+    var selectedRow : Int = 0
     
     
     @IBOutlet var appsTableView : UITableView?
@@ -33,7 +33,7 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count;
+        return self.tableData.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,12 +56,10 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         println("You selected cell #\(indexPath.row)!")
-        if(indexPath.row == 2){
-            self.performSegueWithIdentifier("goto_signup", sender: self)
-        }
-        else{
-            self.performSegueWithIdentifier("selectedQuestion", sender: self)
-        }
+
+        let rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
+        selectedRow = indexPath.row
+        self.performSegueWithIdentifier("selectedQuestion", sender: self)
     }
     
     func getQuestion() {
@@ -108,5 +106,18 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
         })
         
         task.resume()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//     Get the new view controller using [segue destinationViewController].
+//     Pass the selected object to the new view controller.
+        if segue.identifier == "selectedQuestion"{
+            let vc : CategoryTableViewController = segue.destinationViewController as CategoryTableViewController
+            let rowData: NSDictionary = self.tableData[selectedRow] as NSDictionary
+            vc.navigationTitle = rowData["tag"] as String
+            let idString = rowData["id"] as String
+            vc.questionId = idString.toInt()!
+        }
+        
     }
 }
