@@ -20,6 +20,9 @@ class QuestionTableViewController: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.navigationItem.title = navigationTitle
         
+        var s = SocialRadarRestAPI();
+        s.getQuestion();
+        
     }
     
     override func didReceiveMemoryWarning() {
