@@ -241,7 +241,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="T6a-0e-Nfh">
-                        <barButtonItem key="rightBarButtonItem" title="DONE" id="2uH-qn-3MF">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="2uH-qn-3MF">
                             <connections>
                                 <segue destination="1U2-x8-8d6" kind="modal" id="dpH-hU-lxN"/>
                             </connections>
