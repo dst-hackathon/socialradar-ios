@@ -17,13 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        var s = SocialRadarRestAPI();
-//        
-//        s.getQuestion();
-        
-        getQuestion()
-        println("Question in Main Controller : ")
-        println(questions)
+//        getQuestion()
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,15 +66,6 @@ class ViewController: UIViewController {
                 
                 for questionJson in questionsJson {
                     let id = questionJson["id"] as String
-//                    
-//                    let order = questionJson["order"] as AnyObject? as? String
-//                    let tag = questionJson["tag"] as AnyObject? as? String
-//                    let text = questionJson["text"] as AnyObject? as? String
-//                    
-//                    let question = Questions(id: id!,order: order!,tag: tag!,text: text!)
-//                    
-//                    self.questions.append(question)
-                    
                     self.getCategory(id.toInt()!)
                 }
                 
@@ -120,10 +105,6 @@ class ViewController: UIViewController {
                 
                 let question = Questions(id: id!,order: order!,tag: tag!,text: text!)
                 
-//                let categoriesNS = questionJson["categories"] as AnyObject? as? NSArray
-                
-//                let categoriesJson = categoriesNS as Array?
-                
                 let categoriesJson = questionJson["categories"] as NSArray
                 
                 for categoryJson in categoriesJson {
@@ -150,8 +131,9 @@ class ViewController: UIViewController {
                     question.categories.append(category)
                 }
                 
-                
                 self.questions.append(question)
+                
+                
             })
         })
         
