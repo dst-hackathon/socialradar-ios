@@ -12,7 +12,7 @@ import Foundation
 class SocialRadarRestAPI: NSObject {
     func getQuestion() {        
         let url = NSURL(string: "http://api.radar.codedeck.com/questions")
-        let theRequest = NSURLRequest(URL: url)
+        let theRequest = NSURLRequest(URL: url!)
         
         NSURLConnection.sendAsynchronousRequest(theRequest, queue: NSOperationQueue(), completionHandler: {(response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             if data.length > 0 && error == nil {

@@ -53,7 +53,7 @@ class SignupViewController: UIViewController {
             
             NSLog("PostData: %@",post);
             
-            var url:NSURL = NSURL(string: "http://test.com/jsonsignup.php")
+            var url:NSURL = NSURL(string: "http://test.com/jsonsignup.php")!
             
             var postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
             
@@ -79,7 +79,7 @@ class SignupViewController: UIViewController {
                 
                 if (res.statusCode >= 200 && res.statusCode < 300)
                 {
-                    var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)
+                    var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
                     
                     NSLog("Response ==> %@", responseData);
                     

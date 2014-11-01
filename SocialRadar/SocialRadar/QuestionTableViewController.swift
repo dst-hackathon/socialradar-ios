@@ -34,7 +34,7 @@ class QuestionTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.textLabel.text = self.items[indexPath.row]
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
