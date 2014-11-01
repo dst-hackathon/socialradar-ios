@@ -10,7 +10,6 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate  {
 
-    var items: [String] = ["We", "Heart", "B A C K TO S I G N U P"]
     let navigationTitle = "Questions"
     var selectedRow : Int = 0
     
@@ -57,14 +56,10 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         println("You selected cell #\(indexPath.row)!")
-        if(indexPath.row == 2){
-            self.performSegueWithIdentifier("goto_signup", sender: self)
-        }
-        else{
-            let rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
-            selectedRow = indexPath.row
-            self.performSegueWithIdentifier("selectedQuestion", sender: self)
-        }
+
+        let rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
+        selectedRow = indexPath.row
+        self.performSegueWithIdentifier("selectedQuestion", sender: self)
     }
     
     func getQuestion() {
