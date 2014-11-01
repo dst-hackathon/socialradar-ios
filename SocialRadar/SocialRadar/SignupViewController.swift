@@ -28,11 +28,12 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func performSignup(sender: UIButton) {
-        var username:NSString = txtUsername.text as NSString
-        var password:NSString = txtPassword.text as NSString
-        var confirm_password:NSString = txtConfirmPassword.text as NSString
         
-        if ( username.isEqualToString("") || password.isEqualToString("") ) {
+        var username:String = txtUsername.text
+        var password:String = txtPassword.text
+        var confirm_password:String = txtConfirmPassword.text
+        
+        if ( username == ("") || password == ("") ) {
             
             var alertView:UIAlertView = UIAlertView()
             alertView.title = "Sign Up Failed!"
@@ -40,7 +41,7 @@ class SignupViewController: UIViewController {
             alertView.delegate = self
             alertView.addButtonWithTitle("OK")
             alertView.show()
-        } else if ( !password.isEqual(confirm_password) ) {
+        } else if ( password != confirm_password ) {
             
             var alertView:UIAlertView = UIAlertView()
             alertView.title = "Sign Up Failed!"
@@ -53,7 +54,9 @@ class SignupViewController: UIViewController {
             
             let params: [String: String] = ["email": username, "password": password]
             
-            var image:UIImage = UIImage(named: "apple.jpeg")!
+            //var image:UIImage = UIImage(named: "apple.jpeg")!
+            
+            println("email: \(username) password: \(password)")
             
             /*let imageData:NSData = NSData.dataWithData(UIImageJPEGRepresentation(image, 1.0)) as NSData
             
