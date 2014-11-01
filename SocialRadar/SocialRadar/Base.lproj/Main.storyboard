@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="1951" y="158"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Category Table View Controller-->
         <scene sceneID="Nnd-H1-cJv">
             <objects>
-                <tableViewController id="SVd-RD-jHJ" sceneMemberID="viewController">
+                <tableViewController id="SVd-RD-jHJ" customClass="CategoryTableViewController" customModule="SocialRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="csQ-Bb-o49">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,6 +273,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ig3-mb-bv0"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="appsTableView" destination="csQ-Bb-o49" id="RMX-1n-Xkz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ac-a5-QX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
