@@ -12,9 +12,9 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
 
     var navigationTitle = "Category"
     
-    var tableData = []
+    var categories : [Category] = []
     
-    var questionId : Int = 0
+    var question : Questions?
     
     @IBOutlet var appsTableView : UITableView?
     
@@ -27,9 +27,8 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationItem.title = navigationTitle
-        
-        getCategory()
+        self.navigationItem.title = self.question!.tag
+        self.categories = question!.categories
         
     }
 
@@ -41,7 +40,7 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableData.count;
+        return self.categories.count;
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -49,41 +48,12 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
 
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
-        if(self.tableData.count > 0) {
-            let rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
+        if(self.categories.count > 0) {
             
-            cell.textLabel.text = rowData["text"] as? String
+            cell.textLabel.text = categories[indexPath.row].text
         }
         
         return cell
-    }
-    
-    func getCategory() {
-        let urlPath : String = "http://api.radar.codedeck.com/questions/\(questionId)"
-        let url = NSURL(string: urlPath )
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-            println("Task completed")
-            if(error != nil) {
-                // If there is an error in the web request, print it to the console
-                println(error.localizedDescription)
-            }
-            var err: NSError?
-            
-            let jsonResult : AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)!
-            if(err != nil) {
-                // If there is an error parsing JSON, print it to the console
-                println("JSON Error \(err!.localizedDescription)")
-            }
-            //            let results: NSArray = jsonResult["results"] as NSArray
-            dispatch_async(dispatch_get_main_queue(), {
-                let result = jsonResult as NSDictionary
-                self.tableData = result["categories"] as NSArray
-                self.appsTableView!.reloadData()
-            })
-        })
-        
-        task.resume()
     }
 
 
