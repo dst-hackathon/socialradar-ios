@@ -39,11 +39,11 @@ class LoginViewController: UIViewController {
             alertView.show()
         } else {
             
-            var post:NSString = "username=\(username)&password=\(password)"
+            var post:NSString = "email=\(username)&password=\(password)"
             
             NSLog("PostData: %@",post);
             
-            var url:NSURL = NSURL(string: "http://test.com/jsonlogin2.php")!
+            var url:NSURL = NSURL(string: "http://api.radar.codedeck.com/login")!
             
             var postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
             
@@ -78,13 +78,13 @@ class LoginViewController: UIViewController {
                     let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
                     
                     
-                    let success:NSInteger = jsonData.valueForKey("success") as NSInteger
+                    let success:String = jsonData.valueForKey("success") as String
                     
                     //[jsonData[@"success"] integerValue];
                     
                     NSLog("Success: %ld", success);
                     
-                    if(success == 1)
+                    if(success == "success")
                     {
                         NSLog("Login SUCCESS");
                         
