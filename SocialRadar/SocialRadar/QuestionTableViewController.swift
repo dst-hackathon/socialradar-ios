@@ -176,9 +176,8 @@ class QuestionTableViewController: UITableViewController, UITableViewDataSource,
 //     Pass the selected object to the new view controller.
         if segue.identifier == "selectedQuestion"{
             let vc : CategoryTableViewController = segue.destinationViewController as CategoryTableViewController
-            
-            vc.navigationTitle = questions[selectedRow].tag
-            vc.questionId = questions[selectedRow].id
+
+            vc.question = questions[selectedRow]
         }
         
     }
